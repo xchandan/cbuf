@@ -16,7 +16,7 @@ func main() {
 
 	sc := bufio.NewScanner(file)
 
-	cb := NewCircularBuffer(20)
+	cb := NewContextBuffer(20)
 
 	for idx := 1; sc.Scan(); idx++ {
 		line := fmt.Sprintf("%d: %s", idx, sc.Text())
